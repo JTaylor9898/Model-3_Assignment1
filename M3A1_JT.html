@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en", style="background: rgb(5, 233, 157);">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> JQuery Test</title>
+        <meta name="description" content="A really cool site!">
+        <link rel="stylesheet" type="text/css" href="css_2.css">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        
+    </head>
+
+    <script>
+        $(document).ready(function() {
+            $('#bio').hide();
+            $('#smiley').hide();
+
+            $('#header').click(function(){
+                $(this).fadeOut();
+            });
+            $('#header').hover(function(){
+                $('#smiley').show();
+            });
+            $('#b2').click(function(){
+                $('#p1').slideToggle();
+            });
+            $('#smiley').hover(function() {
+                $('#header').slideUp();
+            });
+
+            $('#b1').click(function(){
+                $('#bio').toggle();
+            });
+            
+            $('#p2').hide();
+            $('#cross').click(function(){
+                $('#p2').fadeIn();
+            });
+            $('#b3').click(function(){
+                $('p').append(" This is the Day the LORD has made!")
+            });
+        });
+    
+
+    </script>
+
+    <body>
+
+        <h1 style="text-align:center; color:black;" id="header">
+            I was hidden!
+        </h1> <img src="smiley.jpeg" id="smiley">
+
+        <button style="text-align: end; color:crimson;" id="b1"> Description </button>
+        <button style="text-align: center;" id="b2">Paragraph</button>
+        <button id="b3">Append Text</button>
+
+
+        <h2 style="text-align: center;" id="bio">
+            jQuery is a html module used to be more efficient with our webstack coding.
+        </h2>
+
+        <p id="p1">This is a test of the different functions within jQuery.</p>
+        <p style="text-align:center;" id="p2"> Jesus Christ's display of LOVE</p>
+        <img src="the_cross.jfif" id="cross">
+    </body>
+
+</html>
